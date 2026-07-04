@@ -14,22 +14,17 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     
-    - name: Select Xcode version
-      run: sudo xcode-select -s /Applications/Xcode_15.app/Contents/Developer
+    - name: List directory structure
+      run: |
+        ls -la
+        ls -la DataTransferApp/
+        ls -la DataTransferApp/DataTransferApp/
+    
+    - name: Show Xcode version
+      run: xcodebuild -version
     
     - name: Build for Generic iOS Device (No Signing)
-      run: |
-        xcodebuild build \
-          -project DataTransferApp/DataTransferApp.xcodeproj \
-          -scheme DataTransferApp \
-          -destination 'generic/platform=iOS' \
-          -configuration Release \
-          CODE_SIGNING_ALLOWED=NO \
-          CODE_SIGNING_REQUIRED=NO \
-          CODE_SIGN_IDENTITY="" \
-          DEVELOPMENT_TEAM="" \
-          PROVISIONING_PROFILE="" \
-          -quiet
+      run: xcodebuild build -project DataTransferApp.xcodeproj -scheme DataTransferApp -destination 'generic/platform=iOS' -configuration Release CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY="" DEVELOPMENT_TEAM="" PROVISIONING_PROFILE=""
     
     - name: Find built app
       run: find ~/Library/Developer/Xcode/DerivedData -name "DataTransferApp.app" -type d | head -1
@@ -37,6 +32,7 @@ jobs:
     - name: Copy built app to workspace
       run: |
         APP_PATH=$(find ~/Library/Developer/Xcode/DerivedData -name "DataTransferApp.app" -type d | head -1)
+        echo "App path: $APP_PATH"
         mkdir -p App
         cp -r "$APP_PATH" App/
     
@@ -45,6 +41,7 @@ jobs:
         cd App
         zip -r DataTransferApp.ipa DataTransferApp.app
         mv DataTransferApp.ipa ..
+        ls -la ..
     
     - name: Upload unsigned IPA
       uses: actions/upload-artifact@v4

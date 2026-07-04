@@ -12,18 +12,20 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     
-    - name: Debug - List files
+    - name: Debug - Save project structure
       run: |
-        pwd
-        ls -la
-        ls -la DataTransferApp/
-        ls -la DataTransferApp/DataTransferApp/
+        pwd > debug_logs.txt
+        echo "---" >> debug_logs.txt
+        ls -la >> debug_logs.txt
+        echo "---" >> debug_logs.txt
+        ls -la DataTransferApp/ >> debug_logs.txt
+        echo "---" >> debug_logs.txt
+        xcodebuild -version >> debug_logs.txt
+        echo "---" >> debug_logs.txt
+        xcodebuild -project DataTransferApp.xcodeproj -list >> debug_logs.txt 2>&1
     
-    - name: Debug - Xcode version
-      run: xcodebuild -version
-    
-    - name: Debug - List schemes
-      run: xcodebuild -project DataTransferApp.xcodeproj -list
-    
-    - name: Build
-      run: xcodebuild build -project DataTransferApp.xcodeproj -scheme DataTransferApp -destination 'generic/platform=iOS' -configuration Release CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO
+    - name: Upload debug logs
+      uses: actions/upload-artifact@v4
+      with:
+        name: debug-logs
+        path: debug_logs.txt

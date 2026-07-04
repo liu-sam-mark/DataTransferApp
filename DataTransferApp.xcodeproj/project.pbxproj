@@ -1,0 +1,396 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		00B359E128A6E8E80020F967 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00B359E028A6E8E80020F967 /* Assets.xcassets */; };
+		00B359E328A6E8E80020F967 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00B359E228A6E8E80020F967 /* Preview Assets.xcassets */; };
+		00B359E628A6E8E80020F967 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B359E528A6E8E80020F967 /* ContentView.swift */; };
+		00B359E928A6E8E80020F967 /* DataTransferAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B359E828A6E8E80020F967 /* DataTransferAppApp.swift */; };
+		00B359F128A6E8E80020F967 /* PreviewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B359F028A6E8E80020F967 /* PreviewProvider.swift */; };
+		00E4A28A28A6F0F200E4D98A /* PeerDiscovery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E4A28928A6F0F200E4D98A /* PeerDiscovery.swift */; };
+		00E4A28C28A6F0F200E4D98A /* FileTransferManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E4A28B28A6F0F200E4D98A /* FileTransferManager.swift */; };
+		00E4A28E28A6F0F200E4D98A /* DeviceListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E4A28D28A6F0F200E4D98A /* DeviceListView.swift */; };
+		00E4A29028A6F0F200E4D98A /* TransferProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E4A28F28A6F0F200E4D98A /* TransferProgressView.swift */; };
+		00E4A29228A6F0F200E4D98A /* FilePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E4A29128A6E8E80020F967 /* FilePickerView.swift */; };
+		00E4A29428A6F0F200E4D98A /* FileUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E4A29528A6F0F200E4D98A /* FileUtils.swift */; };
+		00E4A29628A6F0F200E4D98A /* UIApplication+RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E4A29728A6F0F200E4D98A /* UIApplication+RootViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		00B359E028A6E8E80020F967 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		00B359E228A6E8E80020F967 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		00B359E528A6E8E80020F967 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		00B359E828A6E8E80020F967 /* DataTransferAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTransferAppApp.swift; sourceTree = "<group>"; };
+		00B359F028A6E8E80020F967 /* PreviewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewProvider.swift; sourceTree = "<group>"; };
+		00E4A28928A6F0F200E4D98A /* PeerDiscovery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeerDiscovery.swift; sourceTree = "<group>"; };
+		00E4A28B28A6F0F200E4D98A /* FileTransferManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileTransferManager.swift; sourceTree = "<group>"; };
+		00E4A28D28A6F0F200E4D98A /* DeviceListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceListView.swift; sourceTree = "<group>"; };
+		00E4A28F28A6F0F200E4D98A /* TransferProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferProgressView.swift; sourceTree = "<group>"; };
+		00E4A29128A6E8E80020F967 /* FilePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilePickerView.swift; sourceTree = "<group>"; };
+		00E4A29528A6F0F200E4D98A /* FileUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileUtils.swift; sourceTree = "<group>"; };
+		00E4A29728A6F0F200E4D98A /* UIApplication+RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+RootViewController.swift"; sourceTree = "<group>"; };
+		7AFA3C8E1D35360C0083082E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		00B359D528A6E8E80020F967 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		00B359D128A6E8E80020F967 = {
+			isa = PBXGroup;
+			children = (
+				00B359D228A6E8E80020F967 /* DataTransferApp */,
+				00B359D428A6E8E80020F967 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		00B359D228A6E8E80020F967 /* DataTransferApp */ = {
+			isa = PBXGroup;
+			children = (
+				7AFA3C8E1D35360C0083082E /* Info.plist */,
+				00B359DF28A6E8E80020F967 /* Assets.xcassets */,
+				00B359E428A6E8E80020F967 /* Preview Assets.xcassets */,
+				00B359E728A6E8E80020F967 /* DataTransferAppApp.swift */,
+				00B359ED28A6E8E80020F967 /* ContentView.swift */,
+				00B359F228A6E8E80020F967 /* PreviewProvider.swift */,
+				00E4A28828A6F0F200E4D98A /* Modules */,
+				00E4A29328A6F0F200E4D98A /* Views */,
+				00E4A29528A6F0F200E4D98A /* FileUtils.swift */,
+				00E4A29728A6F0F200E4D98A /* UIApplication+RootViewController.swift */,
+			);
+			path = DataTransferApp;
+			sourceTree = "<group>";
+		};
+		00B359D428A6E8E80020F967 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				00B359DC28A6E8E80020F967 /* DataTransferApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		00B359DF28A6E8E80020F967 /* Assets.xcassets */ = {
+			isa = PBXGroup;
+			children = (
+				00B359E028A6E8E80020F967 /* Assets.xcassets */,
+			);
+			path = "Assets.xcassets";
+			sourceTree = "<group>";
+		};
+		00B359E428A6E8E80020F967 /* Preview Assets.xcassets */ = {
+			isa = PBXGroup;
+			children = (
+				00B359E228A6E8E80020F967 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Assets.xcassets";
+			sourceTree = "<group>";
+		};
+		00B359E728A6E8E80020F967 /* DataTransferAppApp.swift */ = {
+			isa = PBXGroup;
+			children = (
+				00B359E828A6E8E80020F967 /* DataTransferAppApp.swift */,
+			);
+			path = "DataTransferAppApp.swift";
+			sourceTree = "<group>";
+		};
+		00B359ED28A6E8E80020F967 /* ContentView.swift */ = {
+			isa = PBXGroup;
+			children = (
+				00B359E528A6E8E80020F967 /* ContentView.swift */,
+			);
+			path = "ContentView.swift";
+			sourceTree = "<group>";
+		};
+		00B359F228A6E8E80020F967 /* PreviewProvider.swift */ = {
+			isa = PBXGroup;
+			children = (
+				00B359F028A6E8E80020F967 /* PreviewProvider.swift */,
+			);
+			path = "PreviewProvider.swift";
+			sourceTree = "<group>";
+		};
+		00E4A28828A6F0F200E4D98A /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				00E4A28928A6F0F200E4D98A /* PeerDiscovery.swift */,
+				00E4A28B28A6F0F200E4D98A /* FileTransferManager.swift */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		00E4A29328A6F0F200E4D98A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				00E4A28D28A6F0F200E4D98A /* DeviceListView.swift */,
+				00E4A28F28A6F0F200E4D98A /* TransferProgressView.swift */,
+				00E4A29128A6F0F200E4D98A /* FilePickerView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		00B359D928A6E8E80020F967 /* DataTransferApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 00B359DB28A6E8E80020F967 /* Build configuration list for PBXNativeTarget "DataTransferApp" */;
+			buildPhases = (
+				00B359D528A6E8E80020F967 /* Frameworks */,
+				00B359D628A6E8E80020F967 /* Sources */,
+				00B359D728A6E8E80020F967 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DataTransferApp;
+			productName = DataTransferApp;
+			productReference = 00B359DC28A6E8E80020F967 /* DataTransferApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		00B359D028A6E8E80020F967 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1800;
+				ORGANIZATIONNAME = "";
+				TargetAttributes = {
+					00B359D928A6E8E80020F967 = {
+						CreatedOnToolsVersion = 18.0;
+					};
+				};
+			};
+			buildConfigurationList = 00B359D328A6E8E80020F967 /* Build configuration list for PBXProject "DataTransferApp" */;
+			compatibilityVersion = "Xcode 15.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 00B359D128A6E8E80020F967;
+			productRefGroup = 00B359D428A6E8E80020F967 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				00B359D928A6E8E80020F967 /* DataTransferApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		00B359D728A6E8E80020F967 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00B359E128A6E8E80020F967 /* Assets.xcassets in Resources */,
+				00B359E328A6E8E80020F967 /* Preview Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		00B359D628A6E8E80020F967 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00B359E628A6E8E80020F967 /* ContentView.swift in Sources */,
+				00B359E928A6E8E80020F967 /* DataTransferAppApp.swift in Sources */,
+				00B359F128A6E8E80020F967 /* PreviewProvider.swift in Sources */,
+				00E4A28A28A6F0F200E4D98A /* PeerDiscovery.swift in Sources */,
+				00E4A28C28A6F0F200E4D98A /* FileTransferManager.swift in Sources */,
+				00E4A28E28A6F0F200E4D98A /* DeviceListView.swift in Sources */,
+				00E4A29028A6F0F200E4D98A /* TransferProgressView.swift in Sources */,
+				00E4A29228A6F0F200E4D98A /* FilePickerView.swift in Sources */,
+				00E4A29428A6F0F200E4D98A /* FileUtils.swift in Sources */,
+				00E4A29628A6F0F200E4D98A /* UIApplication+RootViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7AFA3C8E1D35360C0083082E /* Info.plist */ = {
+			isa = PBXVariantGroup;
+			children = (
+			);
+			name = Info.plist;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		00B359DD28A6E8E80020F967 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		00B359DE28A6E8E80020F967 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		00B359DF28A6E8E80020F967 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = DataTransferApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.DataTransferApp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		00B359E028A6E8E80020F967 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = DataTransferApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.DataTransferApp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		00B359D328A6E8E80020F967 /* Build configuration list for PBXProject "DataTransferApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00B359DD28A6E8E80020F967 /* Debug */,
+				00B359DE28A6E8E80020F967 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		00B359DB28A6E8E80020F967 /* Build configuration list for PBXNativeTarget "DataTransferApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00B359DF28A6E8E80020F967 /* Debug */,
+				00B359E028A6E8E80020F967 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+	};
+	rootObject = 00B359D028A6E8E80020F967 /* Project object */;
+}

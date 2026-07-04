@@ -1,0 +1,59 @@
+name: Build iOS IPA (Unsigned)
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: macos-14
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Select Xcode version
+      run: sudo xcode-select -s /Applications/Xcode_15.app/Contents/Developer
+    
+    - name: Build for Generic iOS Device (No Signing)
+      run: |
+        xcodebuild build \
+          -project DataTransferApp/DataTransferApp.xcodeproj \
+          -scheme DataTransferApp \
+          -destination 'generic/platform=iOS' \
+          -configuration Release \
+          CODE_SIGNING_ALLOWED=NO \
+          CODE_SIGNING_REQUIRED=NO \
+          CODE_SIGN_IDENTITY="" \
+          DEVELOPMENT_TEAM="" \
+          PROVISIONING_PROFILE="" \
+          -quiet
+    
+    - name: Find built app
+      run: find ~/Library/Developer/Xcode/DerivedData -name "DataTransferApp.app" -type d | head -1
+    
+    - name: Copy built app to workspace
+      run: |
+        APP_PATH=$(find ~/Library/Developer/Xcode/DerivedData -name "DataTransferApp.app" -type d | head -1)
+        mkdir -p App
+        cp -r "$APP_PATH" App/
+    
+    - name: Create unsigned IPA
+      run: |
+        cd App
+        zip -r DataTransferApp.ipa DataTransferApp.app
+        mv DataTransferApp.ipa ..
+    
+    - name: Upload unsigned IPA
+      uses: actions/upload-artifact@v4
+      with:
+        name: DataTransferApp-unsigned.ipa
+        path: DataTransferApp.ipa
+    
+    - name: Upload .app bundle
+      uses: actions/upload-artifact@v4
+      with:
+        name: DataTransferApp.app
+        path: App/DataTransferApp.app
